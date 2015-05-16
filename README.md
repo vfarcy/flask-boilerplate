@@ -1,8 +1,12 @@
-## READ FIRST !!!
+## READ FIRST to setup the Pyhton environment !!!
 
-On windows, for Python 2.7 you need to get [Microsoft Visual C++ Compiler for Python 2.7](http://aka.ms/vcpython27) to build the environnement for the pycrypto module. It's a special package made by Microsoft that has all the stuff. It is supported since setuptools 6.0 [1].
+Python 2.7 requires the Windows SDK v7.0 because Python 2.7 is built using Visual Studio 2008 (MSVCR90). Python 3.3 is built using Visual Studio 2010.
+
+On windows, for Python 2.7 you need to get [Microsoft Visual C++ Compiler for Python 2.7](http://aka.ms/vcpython27) to build the environnement for the pycrypto module. It's a special package made by Microsoft that has all the stuff. It is supported since setuptools 6.0.
 
 Unfortunately the latest virtualenv, 1.11.6 as of now, still bundles setuptools 3.6. This means that if you try to run python setup.py build_ext in an virtualenv it will fail, because setuptools can't detect the compiler. The solution is to force upgrade setuptools, example: pip install "setuptools>=6.0".
+
+For Python 3.4 (untested), read [this](http://stackoverflow.com/questions/26473854/python-pip-has-issues-with-path-for-ms-visual-studio-2010-express-for-64-bit-ins/26513378#26513378) and / or [this](http://blog.ionelmc.ro/2014/12/21/compiling-python-extensions-on-windows/)  
 
 ## Welcome
 
