@@ -1,4 +1,4 @@
-## READ FIRST to setup the Pyhton environment !!!
+## READ FIRST to setup the Python environment !!!
 
 Python 2.7 requires the Windows SDK v7.0 because Python 2.7 is built using Visual Studio 2008 (MSVCR90). Python 3.3 is built using Visual Studio 2010.
 
