@@ -1,3 +1,9 @@
+## READ FIRST !!!
+
+On windows, for Python 2.7 you need to get [Microsoft Visual C++ Compiler for Python 2.7](http://aka.ms/vcpython27) to build the environnement for the pycrypto module. It's a special package made by Microsoft that has all the stuff. It is supported since setuptools 6.0 [1].
+
+Unfortunately the latest virtualenv, 1.11.6 as of now, still bundles setuptools 3.6. This means that if you try to run python setup.py build_ext in an virtualenv it will fail, because setuptools can't detect the compiler. The solution is to force upgrade setuptools, example: pip install "setuptools>=6.0".
+
 ## Welcome
 
 Hello. Want to get started with Flask quickly? Good. You came to the right place. This Flask application framework is pre-configured with **Flask-SQLAlchemy**, **Flask-WTF**, **Fabric**, **Coverage**, and the **Bootstrap** frontend (among others). This will get your Flask app up and running on Heroku or PythonAnywhere quickly. Use this starter, boilerplate for all you new Flask projects. Cheers!
